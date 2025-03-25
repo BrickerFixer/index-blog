@@ -11,7 +11,7 @@ class BlogManager {
     async init() {
         try {
             // Update path to be relative to the current page
-            const response = await fetch('../posts/posts.json');
+            const response = await fetch('./posts/posts.json');
             const data = await response.json();
             this.posts = data.posts;
             this.totalPosts = this.posts.length;
@@ -66,7 +66,7 @@ class BlogManager {
         
         wrapper.innerHTML = `
             <h2 class="b-content-item__title">
-                <a href="/index-blog/posts/${post.id}.html" class="b-link">${post.title}</a>
+                <a href="./posts/${post.id}.html" class="b-link">${post.title}</a>
             </h2>
             <div class="b-content-item__content">
                 ${content}
