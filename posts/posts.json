@@ -1,0 +1,16 @@
+{
+    "posts": [
+        {
+            "id": "post2", 
+            "title": "Changelog 0.2",
+            "date": "25 марта, 2025",
+            "readTime": 3
+        },
+        {
+            "id": "post1",
+            "title": "Что такое Index?",
+            "date": "25 марта, 2025",
+            "readTime": 5
+        }
+    ]
+}
