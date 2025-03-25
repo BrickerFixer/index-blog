@@ -11,7 +11,7 @@ class BlogManager {
     async init() {
         try {
             // Use relative path for posts.json
-            const response = await fetch('./posts/posts.json');
+            const response = await fetch('/posts/posts.json');
             const data = await response.json();
             this.posts = data.posts;
             this.totalPosts = this.posts.length;
