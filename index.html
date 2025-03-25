@@ -66,15 +66,17 @@
         </div>
     </div>
 
-    <script src="/js/blog.js"></script>
+    <script src="./js/blog.js"></script>
     <script>
-        // Initialize blog
-        const blog = new BlogManager({
-            postsPerPage: 5,
-            postsContainer: '#posts-container',
-            paginationContainer: '#pagination'
+        window.addEventListener('DOMContentLoaded', () => {
+            // Initialize blog after DOM is loaded
+            const blog = new BlogManager({
+                postsPerPage: 5,
+                postsContainer: '#posts-container',
+                paginationContainer: '#pagination'
+            });
+            blog.init();
         });
-        blog.init();
     </script>
 </body>
 </html>

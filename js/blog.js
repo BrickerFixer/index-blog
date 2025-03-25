@@ -10,8 +10,8 @@ class BlogManager {
 
     async init() {
         try {
-            // Fetch list of posts from posts.json
-            const response = await fetch('/posts/posts.json');
+            // Use relative path for posts.json
+            const response = await fetch('./posts/posts.json');
             const data = await response.json();
             this.posts = data.posts;
             this.totalPosts = this.posts.length;
@@ -23,7 +23,8 @@ class BlogManager {
 
     async loadPost(postId) {
         try {
-            const response = await fetch(`/posts/${postId}.html`);
+            // Use relative path for post HTML files
+            const response = await fetch(`./posts/${postId}.html`);
             const text = await response.text();
             
             // Create a temporary container to parse HTML
