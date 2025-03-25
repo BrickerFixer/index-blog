@@ -24,7 +24,7 @@ class BlogManager {
     async loadPost(postId) {
         try {
             // Use relative path for post HTML files
-            const response = await fetch(`./posts/${postId}.html`);
+            const response = await fetch(`./index-blog/posts/${postId}.html`);
             const text = await response.text();
             
             // Create a temporary container to parse HTML
@@ -66,7 +66,7 @@ class BlogManager {
         
         wrapper.innerHTML = `
             <h2 class="b-content-item__title">
-                <a href="./posts/${post.id}.html" class="b-link">${post.title}</a>
+                <a href="/index-blog/posts/${post.id}.html" class="b-link">${post.title}</a>
             </h2>
             <div class="b-content-item__content">
                 ${content}
