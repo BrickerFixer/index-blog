@@ -24,7 +24,7 @@ class BlogManager {
     async loadPost(postId) {
         try {
             // Use relative path for post HTML files
-            const response = await fetch(`./index-blog/posts/${postId}.html`);
+            const response = await fetch(`./posts/${postId}.html`);
             const text = await response.text();
             
             // Create a temporary container to parse HTML
